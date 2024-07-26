@@ -21,7 +21,8 @@
                 </div>
                 <div class="col-lg-4" style="min-height: 400px;">
                     <div class="position-relative h-100 rounded overflow-hidden">
-                        <img class="position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{ asset('img/about.jpg') }}"
+                            style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-4 py-5">
@@ -44,7 +45,8 @@
         <div class="row bg-primary m-0">
             <div class="col-md-6 px-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="{{ asset('img/promotion.jpg') }}" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="{{ asset('img/promotion.jpg') }}"
+                        style="object-fit: cover;">
                     <button type="button" class="btn-play" data-toggle="modal"
                         data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                         <span></span>
@@ -131,8 +133,8 @@
                         </div>
                         <div class="service-item">
                             <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="{{ asset('img/service-3.jpg') }}"
-                                    style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3"
+                                    src="{{ asset('img/service-3.jpg') }}" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5"
                                 style="margin-top: -75px;">
@@ -146,8 +148,8 @@
                         </div>
                         <div class="service-item">
                             <div class="service-img mx-auto">
-                                <img class="rounded-circle w-100 h-100 bg-light p-3" src="{{ asset('img/service-4.jpg') }}"
-                                    style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100 bg-light p-3"
+                                    src="{{ asset('img/service-4.jpg') }}" style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5"
                                 style="margin-top: -75px;">
@@ -241,71 +243,31 @@
             <div class="row">
                 <div class="col-12">
                     <div class="owl-carousel product-carousel">
-                        <div
-                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
+
+                        @foreach ($products as $product)
+                            <div
+                                class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
+                                <div class="bg-primary mt-n5 py-3" style="width: 80px;">
+
+                                    @if ($product->sale_price != null)
+                                        <h4 class="font-weight-bold text-white mb-0">${{ $product->sale_price }}</h4>
+                                        <h4 class="font-weight-bold text-white mb-0"
+                                            style="text-decoration: line-through;">${{ $product->price }}</h4>
+                                    @else
+                                        <h4 class="font-weight-bold text-white mb-0">${{ $product->sale_price }}</h4>
+                                    @endif
+
+                                </div>
+                                <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
+                                    style="width: 150px; height: 150px;">
+                                    <img class="rounded-circle w-100 h-100" src="{{ asset('img/' . $product->image) }}"
+                                        style="object-fit: cover;">
+                                </div>
+                                <h5 class="font-weight-bold mb-4">{{ $product->name }}</h5>
+                                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                             </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
-                                style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/product-1.jpg') }}"
-                                    style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                        </div>
-                        <div
-                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
-                                style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/product-2.jpg') }}"
-                                    style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                        </div>
-                        <div
-                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
-                                style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/product-3.jpg') }}"
-                                    style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                        </div>
-                        <div
-                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
-                                style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/product-4.jpg') }}"
-                                    style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                        </div>
-                        <div
-                            class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
-                            <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                <h4 class="font-weight-bold text-white mb-0">$99</h4>
-                            </div>
-                            <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
-                                style="width: 150px; height: 150px;">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/product-5.jpg') }}"
-                                    style="object-fit: cover;">
-                            </div>
-                            <h5 class="font-weight-bold mb-4">Vanilla Ice Cream</h5>
-                            <a href="" class="btn btn-sm btn-secondary">Order Now</a>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -328,7 +290,8 @@
                     <div class="owl-carousel team-carousel">
                         <div class="team-item">
                             <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-1.jpg') }}" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-1.jpg') }}"
+                                    style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
@@ -346,7 +309,8 @@
                         </div>
                         <div class="team-item">
                             <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-2.jpg') }}" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-2.jpg') }}"
+                                    style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
@@ -364,7 +328,8 @@
                         </div>
                         <div class="team-item">
                             <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-3.jpg') }}" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-3.jpg') }}"
+                                    style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
@@ -382,7 +347,8 @@
                         </div>
                         <div class="team-item">
                             <div class="team-img mx-auto">
-                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-4.jpg') }}" style="object-fit: cover;">
+                                <img class="rounded-circle w-100 h-100" src="{{ asset('img/team-4.jpg') }}"
+                                    style="object-fit: cover;">
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
@@ -423,7 +389,8 @@
                             <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
                                 elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
                                 labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-1.jpg') }}" alt="">
+                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-1.jpg') }}"
+                                alt="">
                             <h5 class="font-weight-bold m-0">Client Name</h5>
                             <span>Profession</span>
                         </div>
@@ -432,7 +399,8 @@
                             <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
                                 elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
                                 labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-2.jpg') }}" alt="">
+                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-2.jpg') }}"
+                                alt="">
                             <h5 class="font-weight-bold m-0">Client Name</h5>
                             <span>Profession</span>
                         </div>
@@ -441,7 +409,8 @@
                             <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
                                 elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
                                 labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-3.jpg') }}" alt="">
+                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-3.jpg') }}"
+                                alt="">
                             <h5 class="font-weight-bold m-0">Client Name</h5>
                             <span>Profession</span>
                         </div>
