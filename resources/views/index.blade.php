@@ -250,9 +250,9 @@
                                 <div class="bg-primary mt-n5 py-3" style="width: 80px;">
 
                                     @if ($product->sale_price != null)
-                                        <h4 class="font-weight-bold text-white mb-0">${{ $product->sale_price }}</h4>
-                                        <h4 class="font-weight-bold text-white mb-0"
-                                            style="text-decoration: line-through;">${{ $product->price }}</h4>
+                                        <h6 class="font-weight-bold text-white mb-0">${{ $product->sale_price }}</h6>
+                                        <h6 class="font-weight-bold text-white mb-0"
+                                            style="text-decoration: line-through;">${{ $product->price }}</h6>
                                     @else
                                         <h4 class="font-weight-bold text-white mb-0">${{ $product->sale_price }}</h4>
                                     @endif
@@ -263,7 +263,11 @@
                                     <img class="rounded-circle w-100 h-100" src="{{ asset('img/' . $product->image) }}"
                                         style="object-fit: cover;">
                                 </div>
-                                <h5 class="font-weight-bold mb-4">{{ $product->name }}</h5>
+                                <h6 class="font-weight-bold mb-4">
+
+                                    <a href="{{ route('single_product', ['id' => $product->id]) }}">{{ $product->name }}</a>
+
+                                </h6>
                                 <a href="" class="btn btn-sm btn-secondary">Order Now</a>
                             </div>
                         @endforeach
