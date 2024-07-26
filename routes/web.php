@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', [ProjectController::class, 'index'])->name('home');
+
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/products', [ProjectController::class, 'products'])->name('products');
