@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::get('/about', function () {
 Route::get('/products', [ProjectController::class, 'products'])->name('products');
 
 Route::get('/single_product/{id}', [ProjectController::class, 'single_product'])->name('single_product');
+
+Route::get('/cart', [CartController::class, 'cart'])->name('cart');
