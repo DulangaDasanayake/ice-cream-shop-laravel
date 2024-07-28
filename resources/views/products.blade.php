@@ -33,7 +33,19 @@
                                         style="object-fit: cover;">
                                 </div>
                                 <h5 class="font-weight-bold mb-4">{{ $product->name }}</h5>
-                                <a href="" class="btn btn-sm btn-secondary">Order Now</a>
+
+                                <form method="POST" action="{{ route('add_to_cart') }}">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="price" value="{{ $product->price }}">
+                                    <input type="hidden" name="sale_price" value="{{ $product->sale_price }}">
+                                    <input type="hidden" name="quantity" value="1">
+                                    <input type="hidden" name="image" value="{{ $product->image }}">
+                                    <input type="submit" value="add to cart">
+                                </form>
+
+
                             </div>
                 @endforeach
             </div>

@@ -30,3 +30,9 @@ Route::get('/products', [ProjectController::class, 'products'])->name('products'
 Route::get('/single_product/{id}', [ProjectController::class, 'single_product'])->name('single_product');
 
 Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+
+
+Route::post('/add_to_cart',[CartController::class,'add_to_cart'])->name('add_to_cart');
+Route::get('/add_to_cart',function(){
+    return redirect('/');
+});
