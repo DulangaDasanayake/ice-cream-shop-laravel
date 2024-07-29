@@ -22,8 +22,9 @@
                                     <p>{{ $product['name'] }}</p>
                                     <small><span>$</span>{{ $product['price'] }}</small>
                                     <br>
-                                    <form>
-                                        <input type="hidden" name="id" value="1">
+                                    <form method="POST" action="{{ route('remove_from_cart') }}">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $product['id'] }}">
                                         <input type="submit" name="remove_btn" class="remove-btn" value="remove">
                                     </form>
                                 </div>
