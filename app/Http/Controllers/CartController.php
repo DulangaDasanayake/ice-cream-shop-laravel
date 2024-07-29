@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 class CartController extends Controller
 {
     public function cart()
@@ -9,7 +11,7 @@ class CartController extends Controller
         return view('cart');
     }
 
-    function add_to_cart(Request $request)
+    public function add_to_cart(Request $request)
     {
 
         //if we have a cart in session
@@ -47,14 +49,16 @@ class CartController extends Controller
                 $cart[$id] = $product_array;
                 $request->session()->put('cart', $cart);
 
-            //product is already in cart
+                //product is already in cart
             } else {
                 echo "<script>alert('product is already in cart')</script>";
             }
 
+            $this->calculateTotalCart($request);
+
             return view('cart');
 
-        //if we don't have a cart in session
+            //if we don't have a cart in session
         } else {
             $cart = array();
 
@@ -82,7 +86,29 @@ class CartController extends Controller
             $cart[$id] = $product_array; //here the error
             $request->session()->put('cart', $cart);
 
+            $this->calculateTotalCart($request);
+
             return view('cart');
         }
+    }
+
+    //calculate the total
+    public function calculateTotalCart(Request $request)
+    {
+        $cart = $request->session()->get('cart');
+        $total_price = 0;
+        $total_quantity = 0;
+
+        foreach ($cart as $id => $product) {
+            $product = $cart[$id];
+
+            $price = $product['price'];
+            $quantity = $product['quantity'];
+
+            $total_price = $total_price + ($price * $quantity);
+            $total_quantity = $total_quantity + $quantity;
+        }
+        $request->session()->put('total', $total_price);
+        $request->session()->put('quantity', $total_quantity);
     }
 }
