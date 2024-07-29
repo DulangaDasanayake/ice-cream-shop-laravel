@@ -144,7 +144,7 @@ class CartController extends Controller
 
             }
 
-            if($product_quantity<=0){
+            if ($product_quantity <= 0) {
                 $this->remove_from_cart(($request));
             }
 
@@ -157,5 +157,11 @@ class CartController extends Controller
             }
         }
         return view('cart');
+    }
+
+    //checkout func
+    public function checkout()
+    {
+        return view('checkout');
     }
 }
