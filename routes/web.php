@@ -50,6 +50,6 @@ Route::get('/edit_product_quantity', function () {
 
 Route::get('/checkout',[CartController::class,'checkout'])->name('checkout');
 
-Route::post('/place_order',[CartController::class. 'place_order'])->name('place_order');
+Route::post('/place_order',[CartController::class, 'place_order'])->name('place_order');
 
 Route::get('/payment',[PaymentController::class,'payment'])->name('payment');
