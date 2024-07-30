@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
-    <section class="container mt-2 my-3 py-5">
+    <section class="container mt-2 my-3 py-5" style="margin:50px auto;">
         <div class="container mt-2 text-center">
 
-            <h4>Payment</h4>
+            <h3 style="margin-bottom: 20px">Payment</h3>
 
             @if (Session::has('total') && Session::get('total') != null)
                 @if (Session::has('order_id') && Session::get('order_id') != null)
