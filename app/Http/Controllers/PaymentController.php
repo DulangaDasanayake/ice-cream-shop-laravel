@@ -49,4 +49,10 @@ class PaymentController extends Controller
 
     }
 
+    //thank you function
+    public function thank_you()
+    {
+        return view('thank_you');
+    }
+
 }
