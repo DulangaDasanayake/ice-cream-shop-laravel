@@ -6,14 +6,14 @@
 
             <h3 style="margin-bottom: 20px">Thank you</h3>
 
-            
-                @if (Session::has('order_id') && Session::get('order_id') != null)
-                    <h4 style="color: blue" class="my-5">Order id: ${{ Session::get('order_id') }}</h4>
 
-                    <p>Please keep order id in safe place for future reference!</p>
-                @endif
+            @if (Session::has('order_id') && Session::get('order_id') != null)
+                <h4 style="color: blue" class="my-5">Order id: ${{ Session::get('order_id') }}</h4>
+
+                <p>Please keep order id in safe place for future reference!<br>
+                    We will deliver youe order within 3-6 Days.</p>
+            @endif
 
         </div>
     </section>
-    
 @endsection
