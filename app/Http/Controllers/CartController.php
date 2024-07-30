@@ -159,7 +159,7 @@ class CartController extends Controller
         return view('cart');
     }
 
-    //checkout func
+    //checkout function
     public function checkout()
     {
         return view('checkout');

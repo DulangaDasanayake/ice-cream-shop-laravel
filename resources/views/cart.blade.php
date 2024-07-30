@@ -68,7 +68,7 @@
 
             @if (Session::has('total'))
                 @if (Session::get('total') != null)
-                    <form method="POST" action="{{ route('checkout') }}">
+                    <form method="GET" action="{{ route('checkout') }}">
                         <input type="submit" class="btn checkout-btn" value="Checkout" name="">
                     </form>
                 @endif
