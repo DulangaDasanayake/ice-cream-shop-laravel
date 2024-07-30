@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+//issue fix
 
 class CartController extends Controller
 {
@@ -165,7 +167,7 @@ class CartController extends Controller
         return view('checkout');
     }
 
-    //
+    //place order function
     public function place_order(Request $request)
     {
         if ($request->session()->has('cart')) {
@@ -176,12 +178,26 @@ class CartController extends Controller
             $city = $request->input('city');
             $address = $request->input('address');
 
-            $cost=$request->session()->get('total');
-            $status="not paid";
-            $date=date('Y-m-d');
+            $cost = $request->session()->get('total');
+            $status = "not paid";
+            $date = date('Y-m-d');
 
-            $cart=$request->session()->get('cart');
-            
+            $cart = $request->session()->get('cart');
+
+            //DB had a red underline-> issue fixed importing DB
+            $order_id = DB::table('orders')->InsertGetId(
+                [
+                    'name' => $name,
+                    'email' => $email,
+                    'phone' => $phone,
+                    'city' => $city,
+                    'address' => $address,
+                    'cost' => $cost,
+                    'status' => $status,
+                    'date' => $date,
+
+                ], 'id'
+            );
 
         } else {
             return redirect('/');
