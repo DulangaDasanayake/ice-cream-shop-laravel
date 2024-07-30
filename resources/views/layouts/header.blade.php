@@ -78,16 +78,16 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Product</a>
+                        <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
+                        <a href="{{ route('products') }}" class="nav-item nav-link">Products</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="{{route('cart')}}" class="nav-item nav-link">Service</a>
+                        <a href="{{route('checkout')}}" class="nav-item nav-link">Gallery</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
