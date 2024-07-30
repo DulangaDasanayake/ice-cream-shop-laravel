@@ -178,10 +178,9 @@ class CartController extends Controller
             $phone = $request->input('phone');
             $city = $request->input('city');
             $address = $request->input('address');
-
-            $cost = $request->session()->get('total');
             $status = "not paid";
-            $date = date('Y-m-d');
+            $date = date('Y-m-d h:i:s'); //store exact time
+            $cost = $request->session()->get('total');
 
             $cart = $request->session()->get('cart');
 

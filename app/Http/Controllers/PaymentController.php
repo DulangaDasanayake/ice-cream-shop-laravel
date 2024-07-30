@@ -26,7 +26,7 @@ class PaymentController extends Controller
             $order_id = $request->session()->get('order_id');
             $transaction_id = $request->session()->get('transaction_id');
             $order_status = 'paid';
-            $payment_date = date('Y-m-d');
+            $payment_date = date('Y-m-d h:i:s'); //store exact time
 
             $affected = DB::table('orders')
                 ->where('id', $order_id)
