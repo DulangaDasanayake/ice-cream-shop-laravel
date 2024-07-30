@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 //issue fix
 
 class CartController extends Controller
@@ -198,6 +199,32 @@ class CartController extends Controller
 
                 ], 'id'
             );
+
+            foreach ($cart as $id => $product) {
+
+                $product = $cart[$id];
+                $product_id = $product['id'];
+                $product_name = $product['name'];
+                $product_price = $product['price'];
+                $product_quantity = $product['quantity'];
+                $product_image = $product['image'];
+
+                DB::table('order_items')->insert([
+
+                    'order_id' => $order_id,
+                    'product_id' => $product_id,
+                    'product_name' => $product_name,
+                    'product_price' => $product_price,
+                    'product_quantity' => $product_quantity,
+                    'product_image' => $product_image,
+                    'order_date' => $date,
+
+                ]);
+
+            }
+
+            $request->session()->put('order_id',$order_id);
+            return view('payment');
 
         } else {
             return redirect('/');
