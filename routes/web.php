@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +47,12 @@ Route::get('/edit_product_quantity', function () {
     return redirect('/');
 });
 
+Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 
-Route::get('/checkout',[CartController::class,'checkout'])->name('checkout');
+Route::post('/place_order', [CartController::class, 'place_order'])->name('place_order');
 
-Route::post('/place_order',[CartController::class, 'place_order'])->name('place_order');
+Route::get('/payment', [PaymentController::class, 'payment'])->name('payment');
 
-Route::get('/payment',[PaymentController::class,'payment'])->name('payment');
+Route::get('/verify_payment/{transaction_id}', [PaymentController::class, "verify_payment"])->name("verify_payment");
+
+Route::get('/complete_payment', [PaymentController::class, "complete_payment"])->name("complete_payment");

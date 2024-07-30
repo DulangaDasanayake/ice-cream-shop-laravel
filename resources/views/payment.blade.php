@@ -47,6 +47,9 @@
                     var transaction = orderData.purchase_units[0].payments.captures[0];
                     alert('Transaction ' + transaction.status + ':' + transaction.id +
                         '\n\nSee console for all available details');
+
+                    window.location.href = "/verify_payment/" + transaction.id;
+
                 });
             }
         }).render('#paypal-button-container');
