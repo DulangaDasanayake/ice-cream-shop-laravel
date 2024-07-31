@@ -1,22 +1,61 @@
 @extends('layouts.main')
 @section('content')
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{{ asset('img/carousel-1.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
+                            <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 2001</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{{ asset('img/carousel-2.jpg') }}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
+                            <h1 class="display-3 text-white mb-md-4">Made From Our Own Organic Milk</h1>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n1"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n1"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <h1 class="section-title position-relative text-center mb-5">Traditional & Delicious Ice Cream Since 1950
+                    <h1 class="section-title position-relative text-center mb-5">Traditional & Delicious Ice Cream Since 2001
                     </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 py-5">
                     <h4 class="font-weight-bold mb-3">About Us</h4>
-                    <h5 class="text-muted mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero
-                        dolor sea</h5>
-                    <p>Takimata sed vero vero no sit sed, justo clita duo no duo amet et, nonumy kasd sed dolor eos diam
-                        lorem eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit magna. Erat at est justo sit
-                        ut. Labor diam sed ipsum et eirmod</p>
+                    <h5 class="text-muted mb-3">Since 2001, we've been crafting traditional and delicious ice cream using the
+                        finest ingredients</h5>
+                    <p>Our journey began in a small shop, and today, we're renowned for our rich and creamy ice cream,
+                        made with love and passion. We believe in quality and tradition, offering a taste of nostalgia with
+                        every scoop.</p>
                     <a href="" class="btn btn-secondary mt-2">Learn More</a>
                 </div>
                 <div class="col-lg-4" style="min-height: 400px;">
@@ -27,11 +66,13 @@
                 </div>
                 <div class="col-lg-4 py-5">
                     <h4 class="font-weight-bold mb-3">Our Features</h4>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum
-                        et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
-                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>Eos kasd eos dolor</h5>
+                    <p>Our journey began in a small shop, and today, we're renowned for our rich and creamy ice cream,
+                        made with love and passion. We believe in quality and tradition, offering a taste of nostalgia with
+                        every scoop.</p>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>"All-natural ingredients"
+                    </h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>"Handcrafted recipes"</h5>
+                    <h5 class="text-muted mb-3"><i class="fa fa-check text-secondary mr-3"></i>"Locally sourced dairy"</h5>
                     <a href="" class="btn btn-primary mt-2">Learn More</a>
                 </div>
             </div>
@@ -60,8 +101,11 @@
                         <h3 class="font-weight-bold text-secondary mb-0">$199</h3>
                     </div>
                     <h3 class="font-weight-bold text-white mt-3 mb-4">Chocolate Ice Cream</h3>
-                    <p class="text-white mb-4">Lorem justo clita dolor ipsum ut sed eos, ipsum et dolor kasd sit ea
-                        justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum</p>
+                    <p class="text-white mb-4">Indulge in our rich and creamy Chocolate Ice Cream,
+                        crafted from the finest cocoa beans and fresh dairy. With a perfect balance of sweetness and deep
+                        chocolate flavor, each bite is a delightful experience. Treat yourself to a timeless classic that
+                        satisfies every
+                        chocolate lover's craving.</p>
                     <a href="" class="btn btn-secondary py-3 px-5 mt-2">Order Now</a>
                 </div>
             </div>
@@ -110,8 +154,9 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
                                 <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Quality Maintain</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo
-                                </p>
+                                <p>We are committed to maintaining the highest standards of quality in every scoop. Our team
+                                    meticulously selects premium ingredients and follows strict processes to ensure every
+                                    batch meets our excellence.</p>
                                 <a href=""
                                     class="border-bottom border-secondary text-decoration-none text-secondary">Learn
                                     More</a>
@@ -124,8 +169,10 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded p-4 pb-5" style="margin-top: -75px;">
                                 <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Individual Approach</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo
-                                </p>
+                                <p>We tailor our ice cream offerings to suit individual tastes and preferences, ensuring a
+                                    personalized experience for every customer. Whether it's a unique flavor or a specific
+                                    dietary requirement.</p>
+
                                 <a href=""
                                     class="border-bottom border-secondary text-decoration-none text-secondary">Learn
                                     More</a>
@@ -139,8 +186,10 @@
                             <div class="position-relative text-center bg-light rounded p-4 pb-5"
                                 style="margin-top: -75px;">
                                 <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Celebration Ice Cream</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo
-                                </p>
+                                <p>Make every celebration sweeter with our custom ice cream creations. From birthdays to
+                                    anniversaries, our delightful flavors and festive designs add a special touch to your
+                                    events.</p>
+
                                 <a href=""
                                     class="border-bottom border-secondary text-decoration-none text-secondary">Learn
                                     More</a>
@@ -154,8 +203,10 @@
                             <div class="position-relative text-center bg-light rounded p-4 pb-5"
                                 style="margin-top: -75px;">
                                 <h5 class="font-weight-semi-bold mt-5 mb-3 pt-5">Delivery To Any Point</h5>
-                                <p>Dolor nonumy sed eos sed lorem diam amet eos magna. Dolor kasd lorem duo stet kasd justo
-                                </p>
+                                <p>Enjoy our delicious ice cream from the comfort of your home. We offer delivery services
+                                    to any location, ensuring that you can indulge in your favorite treats anytime,
+                                    anywhere.</p>
+
                                 <a href=""
                                     class="border-bottom border-secondary text-decoration-none text-secondary">Learn
                                     More</a>
@@ -265,22 +316,22 @@
                                 </div>
                                 <h6 class="font-weight-bold mb-4">
 
-                                    <a href="{{ route('single_product', ['id' => $product->id]) }}">{{ $product->name }}</a>
+                                    <a
+                                        href="{{ route('single_product', ['id' => $product->id]) }}">{{ $product->name }}</a>
 
                                 </h6>
 
-                                <form method="POST" action="{{route('add_to_cart')}}">
+                                <form method="POST" action="{{ route('add_to_cart') }}">
                                     @csrf
-                                    <input type="hidden" name="id" value="{{$product->id}}">
-                                    <input type="hidden" name="name" value="{{$product->name}}">
-                                    <input type="hidden" name="price" value="{{$product->price}}">
-                                    <input type="hidden" name="sale_price" value="{{$product->sale_price}}">
+                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                    <input type="hidden" name="name" value="{{ $product->name }}">
+                                    <input type="hidden" name="price" value="{{ $product->price }}">
+                                    <input type="hidden" name="sale_price" value="{{ $product->sale_price }}">
                                     <input type="hidden" name="quantity" value="1">
-                                    <input type="hidden" name="image" value="{{$product->image}}">
-                                    <input type="submit" value="add to cart">
+                                    <input type="hidden" name="image" value="{{ $product->image }}">
+                                    <input type="submit" value="Add to Cart" class="btn btn-primary py-md-3 px-md-5 mt-2">
                                 </form>
 
-                                {{-- <a href="" class="btn btn-sm btn-secondary">Order Now</a> --}}
                             </div>
                         @endforeach
 
@@ -311,8 +362,8 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">David Martinez</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Chief Executive Officer</h6>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -330,8 +381,8 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Alice Johnson</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Head of Operations</h6>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -349,8 +400,8 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">William Locksmith</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Lead Ice Cream Chef</h6>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -368,8 +419,8 @@
                             </div>
                             <div class="position-relative text-center bg-light rounded px-4 py-5"
                                 style="margin-top: -100px;">
-                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Full Name</h3>
-                                <h6 class="text-uppercase text-muted mb-4">Designation</h6>
+                                <h3 class="font-weight-bold mt-5 mb-3 pt-5">Michael Brown</h3>
+                                <h6 class="text-uppercase text-muted mb-4">Creative Director</h6>
                                 <div class="d-flex justify-content-center pt-1">
                                     <a class="btn btn-outline-secondary btn-social mr-2" href="#"><i
                                             class="fab fa-twitter"></i></a>
@@ -389,51 +440,42 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <h1 class="section-title position-relative text-center mb-5">Clients Say About Our Famous Ice Cream
-                    </h1>
-                </div>
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h1 class="section-title position-relative text-center mb-5">Clients Say About Our Famous Ice Cream</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
-                                elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                                labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-1.jpg') }}"
-                                alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
-                                elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                                labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-2.jpg') }}"
-                                alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
-                                elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos
-                                labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-3.jpg') }}"
-                                alt="">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">"The ice cream here is absolutely delightful! The flavors are rich and creamy, and the texture is perfect. I've never had anything like it. My personal favorite is the chocolate fudge. It always brings a smile to my face."</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-1.jpg') }}" alt="">
+                        <h5 class="font-weight-bold m-0">Bob Michael</h5>
+                        <span>Graphic Designer</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">"I've tried ice cream from many places, but nothing beats the unique flavors and quality offered here. The customer service is excellent, and they always make you feel welcome. Highly recommend the strawberry cheesecake flavor."</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-2.jpg') }}" alt="">
+                        <h5 class="font-weight-bold m-0">Harry Green</h5>
+                        <span>Photographer</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                        <h4 class="font-weight-light mb-4">"This place has the best ice cream I've ever tasted. The ingredients are fresh, and you can really taste the difference. My kids love coming here, and it's always a highlight of our day. The mint chocolate chip is a must-try!"</h4>
+                        <img class="img-fluid mx-auto mb-3" src="{{ asset('img/testimonial-3.jpg') }}" alt="">
+                        <h5 class="font-weight-bold m-0">Evan Tyson</h5>
+                        <span>Marketing Specialist</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+</div>
+<!-- Testimonial End -->
+
 @endsection
