@@ -43,6 +43,12 @@
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
                     <div class="d-inline-flex align-items-center">
+                        <a class="text-white pl-3" href="">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </a>
+                        <a class="text-white pl-3 mr-3" href="">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                        </a>
                         <a class="text-white px-3" href="">
                             <i class="fab fa-facebook-f"></i>
                         </a>
@@ -55,11 +61,12 @@
                         <a class="text-white px-3" href="">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="text-white pl-3" href="">
+                        <a class="text-white px-3" href="">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -86,9 +93,9 @@
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>CREAM</h1>
                     </a>
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="{{route('cart')}}" class="nav-item nav-link">Service</a>
-                        <a href="{{route('checkout')}}" class="nav-item nav-link">Gallery</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('service')}}" class="nav-item nav-link">Service</a>
+                        <a href="{{route('gallery')}}" class="nav-item nav-link">Gallery</a>
+                        <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -96,42 +103,3 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5 pb-5">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('img/carousel-1.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                            <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 1950</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('img/carousel-2.jpg') }}" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                            <h1 class="display-3 text-white mb-md-4">Made From Our Own Organic Milk</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n1"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-secondary px-0" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n1"></span>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- Carousel End -->
