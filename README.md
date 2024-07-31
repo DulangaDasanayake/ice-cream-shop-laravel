@@ -1,6 +1,3 @@
-Got it! Here is the entire `README.md` content formatted as Markdown code:
-
-```markdown
 # Frozen &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/DulangaDasanayake/ice-cream-shop-laravel/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/DulangaDasanayake/ice-cream-shop-laravel/pulls)
 
 Remember to give me your generous ⭐ Thanks you so very much !!!
@@ -56,7 +53,7 @@ A delightful ice cream shop web application built with Laravel. Browse our flavo
 
 - **Hosting:**
 
-  - Vercel for deployment and hosting
+  - Project will deploy later.
   - Web App Demo Link:
 
 ### Installation
@@ -137,6 +134,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Thanks Giving ❤️
 
 Thanks to the Laravel team, Bootstrap developers, PayPal, and all contributors who have made this project possible. Your support is greatly appreciated!
-```
-
-You can copy this entire block and save it as `README.md` in your repository. Let me know if you need anything else!
