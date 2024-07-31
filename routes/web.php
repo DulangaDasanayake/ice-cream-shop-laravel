@@ -26,6 +26,18 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
+Route::get('/gallery', function () {
+    return view('gallery');
+})->name('gallery');
+
+Route::get('/service', function () {
+    return view('service');
+})->name('service');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::get('/products', [ProjectController::class, 'products'])->name('products');
 
 Route::get('/single_product/{id}', [ProjectController::class, 'single_product'])->name('single_product');
