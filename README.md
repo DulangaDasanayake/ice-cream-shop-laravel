@@ -4,7 +4,7 @@ Remember to give me your generous ⭐ Thanks you so very much !!!
 
 A delightful ice cream shop web application built with Laravel. Browse our flavors, place orders, and manage your account with ease! Stay tuned for updates.
 
-<img src="readmedata/home.JPG" alt="Image Description" width="800" height="500">
+<img src="readmedata/home.JPG" alt="Image Description" width="800" height="400">
 
 ## Table of Contents
 
@@ -28,7 +28,21 @@ A delightful ice cream shop web application built with Laravel. Browse our flavo
 - PayPal / credit card integration
 - Database seeder (products & users)
 
-<img src="readmedata/product.JPG" alt="Image Description" width="800" height="500">
+### Gallery
+
+<img src="readmedata/gallery.JPG" alt="Image Description" width="800" height="500">
+
+### Contact
+
+<img src="readmedata/contact.JPG" alt="Image Description" width="800" height="500">
+
+### Services
+
+<img src="readmedata/services.JPG" alt="Image Description" width="800" height="500">
+
+### About
+
+<img src="readmedata/about.JPG" alt="Image Description" width="800" height="500">
 
 ### Used Technologies
 
