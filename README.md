@@ -30,19 +30,19 @@ A delightful ice cream shop web application built with Laravel. Browse our flavo
 
 ### Gallery
 
-<img src="readmedata/gallery.JPG" alt="Image Description" width="800" height="500">
+<img src="readmedata/gallery.JPG" alt="Image Description" width="800" height="400">
 
 ### Contact
 
-<img src="readmedata/contact.JPG" alt="Image Description" width="800" height="500">
+<img src="readmedata/contact.JPG" alt="Image Description" width="800" height="380">
 
 ### Services
 
-<img src="readmedata/services.JPG" alt="Image Description" width="800" height="500">
+<img src="readmedata/services.JPG" alt="Image Description" width="800" height="380">
 
 ### About
 
-<img src="readmedata/about.JPG" alt="Image Description" width="800" height="500">
+<img src="readmedata/about.JPG" alt="Image Description" width="800" height="380">
 
 ### Used Technologies
 
