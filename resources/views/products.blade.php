@@ -1,5 +1,18 @@
 @extends('layouts.main')
 @section('content')
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5">Products</h1>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a href="{{ route('home') }}" class="nav-item nav-link active">Home</a></p>
+                <i class="fa fa-circle px-3"></i>
+                <p class="m-0">Products</p>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
     <!-- Products Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
