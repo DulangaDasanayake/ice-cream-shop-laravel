@@ -39,8 +39,8 @@
                     <img class="w-100" src="{{ asset('img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                            <h1 class="display-3 text-white mb-md-4">Traditional Ice Cream Since 2001</h1>
+                            <h4 class="text-white text-uppercase mb-md-3">Authentic & Flavorful</h4>
+                            <h1 class="display-3 text-white mb-md-4">Savor the Nostalgia With Our Timeless IceCream</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                     <img class="w-100" src="{{ asset('img/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">Traditional & Delicious</h4>
-                            <h1 class="display-3 text-white mb-md-4">Made From Our Own Organic Milk</h1>
+                            <h4 class="text-white text-uppercase mb-md-3">Timeless & Tasty</h4>
+                            <h1 class="display-3 text-white mb-md-4">Made Will Fresh Dairy Milk</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
                         </div>
                     </div>
